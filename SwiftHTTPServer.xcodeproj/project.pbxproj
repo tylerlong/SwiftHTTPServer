@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D4303EC81BC80141002D1826 /* SwiftHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = D4303EC71BC80141002D1826 /* SwiftHTTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4303ED61BC80180002D1826 /* DemoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ECF1BC80180002D1826 /* DemoServer.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303ED71BC80180002D1826 /* HttpHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED01BC80180002D1826 /* HttpHandlers.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303ED81BC80180002D1826 /* HttpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED11BC80180002D1826 /* HttpParser.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303ED91BC80180002D1826 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED21BC80180002D1826 /* HttpRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303EDA1BC80180002D1826 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED31BC80180002D1826 /* HttpResponse.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303EDB1BC80180002D1826 /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED41BC80180002D1826 /* HttpServer.swift */; settings = {ASSET_TAGS = (); }; };
+		D4303EDC1BC80180002D1826 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4303ED51BC80180002D1826 /* Socket.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D4303EC41BC80141002D1826 /* SwiftHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4303EC71BC80141002D1826 /* SwiftHTTPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftHTTPServer.h; sourceTree = "<group>"; };
 		D4303EC91BC80141002D1826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4303ECF1BC80180002D1826 /* DemoServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoServer.swift; sourceTree = "<group>"; };
+		D4303ED01BC80180002D1826 /* HttpHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHandlers.swift; sourceTree = "<group>"; };
+		D4303ED11BC80180002D1826 /* HttpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpParser.swift; sourceTree = "<group>"; };
+		D4303ED21BC80180002D1826 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		D4303ED31BC80180002D1826 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		D4303ED41BC80180002D1826 /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
+		D4303ED51BC80180002D1826 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,13 @@
 		D4303EC61BC80141002D1826 /* SwiftHTTPServer */ = {
 			isa = PBXGroup;
 			children = (
+				D4303ECF1BC80180002D1826 /* DemoServer.swift */,
+				D4303ED01BC80180002D1826 /* HttpHandlers.swift */,
+				D4303ED11BC80180002D1826 /* HttpParser.swift */,
+				D4303ED21BC80180002D1826 /* HttpRequest.swift */,
+				D4303ED31BC80180002D1826 /* HttpResponse.swift */,
+				D4303ED41BC80180002D1826 /* HttpServer.swift */,
+				D4303ED51BC80180002D1826 /* Socket.swift */,
 				D4303EC71BC80141002D1826 /* SwiftHTTPServer.h */,
 				D4303EC91BC80141002D1826 /* Info.plist */,
 			);
@@ -90,6 +111,7 @@
 		D4303EBB1BC80141002D1826 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Tylingsoft;
 				TargetAttributes = {
@@ -130,6 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4303EDA1BC80180002D1826 /* HttpResponse.swift in Sources */,
+				D4303EDC1BC80180002D1826 /* Socket.swift in Sources */,
+				D4303ED71BC80180002D1826 /* HttpHandlers.swift in Sources */,
+				D4303EDB1BC80180002D1826 /* HttpServer.swift in Sources */,
+				D4303ED91BC80180002D1826 /* HttpRequest.swift in Sources */,
+				D4303ED81BC80180002D1826 /* HttpParser.swift in Sources */,
+				D4303ED61BC80180002D1826 /* DemoServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +252,7 @@
 		D4303ECD1BC80141002D1826 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -235,12 +265,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Tylingsoft.SwiftHTTPServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D4303ECE1BC80141002D1826 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

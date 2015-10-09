@@ -1,7 +1,7 @@
 //
-//  Handlers.swift
-//  Swifter
-//  Copyright (c) 2014 Damian Kołakowski. All rights reserved.
+//  HttpHandlers.swift
+//  SwiftHTTPServer
+//  Copyright (c) 2015 Tylingsoft. All rights reserved.
 //
 
 import Foundation
@@ -11,9 +11,18 @@ public class HttpHandlers {
     public class func directory(dir: String) -> ( HttpRequest -> HttpResponse ) {
         return { request in
             if let localPath = request.capturedUrlGroups.first {
-                let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(localPath)
-                if let fileBody = NSData(contentsOfFile: filesPath) {
-                    return HttpResponse.RAW(200, "OK", nil, fileBody)
+                if localPath == "" { // root path
+                    for index in ["index.html", "index.htm"] {
+                        let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(index)
+                        if let fileBody = NSData(contentsOfFile: filesPath) {
+                            return HttpResponse.RAW(200, "OK", nil, fileBody)
+                        }
+                    }
+                } else {
+                    let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(localPath)
+                    if let fileBody = NSData(contentsOfFile: filesPath) {
+                        return HttpResponse.RAW(200, "OK", nil, fileBody)
+                    }
                 }
             }
             return HttpResponse.NotFound
@@ -50,6 +59,7 @@ public class HttpHandlers {
 }
 
 private extension String {
+
     var stringByExpandingTildeInPath: String {
         return (self as NSString).stringByExpandingTildeInPath
     }
@@ -57,4 +67,5 @@ private extension String {
     func stringByAppendingPathComponent(str: String) -> String {
         return (self as NSString).stringByAppendingPathComponent(str)
     }
+
 }

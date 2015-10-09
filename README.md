@@ -2,7 +2,9 @@
 
 A tiny http server engine written in Swift programming language.
 
-The code is based on [glock45/swifter](https://github.com/glock45/swifter).
+The code is based on [glock45/swifter](https://github.com/glock45/swifter) and subject to the same license as the original project.
+
+This project is compatible with Carthage.
 
 
 ### How to start ?

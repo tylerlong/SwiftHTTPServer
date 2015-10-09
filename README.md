@@ -26,7 +26,6 @@ server.start()
 
 ### How to redirect ?
 
-
 ```swift
 let server = HttpServer()
 server["/redirect"] = { request in
@@ -37,7 +36,6 @@ server.start()
 
 
 ### Carthage ? Yes.
-
 
 ```
 github "tylerlong/SwiftHTTPServer"

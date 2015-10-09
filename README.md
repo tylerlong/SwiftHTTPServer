@@ -7,7 +7,7 @@ The code is based on [glock45/swifter](https://github.com/glock45/swifter) and s
 This project is compatible with Carthage.
 
 
-### How to start ?
+## How to start ?
 
 ```swift
 let server = HttpServer()
@@ -17,7 +17,7 @@ server.start()
 ```
 
 
-### How to share files ? 
+## How to share files ? 
 
 ```swift
 let server = HttpServer()
@@ -26,7 +26,7 @@ server.start()
 ```
 
 
-### How to redirect ?
+## How to redirect ?
 
 ```swift
 let server = HttpServer()
@@ -37,8 +37,17 @@ server.start()
 ```
 
 
-### Carthage ? Yes.
+## Carthage ? Yes.
 
 ```
 github "tylerlong/SwiftHTTPServer"
 ```
+
+
+## todo
+
+```
+./SwiftHTTPServer/HttpResponse.swift:        headers["Server"] = "Swifter \(HttpServer.VERSION)"
+./SwiftHTTPServer/HttpServer.swift:    static let VERSION = "1.0.2";
+```
+

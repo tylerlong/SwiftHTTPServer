@@ -28,6 +28,7 @@
 		D4303ED31BC80180002D1826 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
 		D4303ED41BC80180002D1826 /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
 		D4303ED51BC80180002D1826 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		D4303EDD1BC80340002D1826 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		D4303EBA1BC80141002D1826 = {
 			isa = PBXGroup;
 			children = (
+				D4303EDD1BC80340002D1826 /* README.md */,
 				D4303EC61BC80141002D1826 /* SwiftHTTPServer */,
 				D4303EC51BC80141002D1826 /* Products */,
 			);

@@ -50,4 +50,3 @@ github "tylerlong/SwiftHTTPServer"
 ./SwiftHTTPServer/HttpResponse.swift:        headers["Server"] = "Swifter \(HttpServer.VERSION)"
 ./SwiftHTTPServer/HttpServer.swift:    static let VERSION = "1.0.2";
 ```
-

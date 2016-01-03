@@ -11,14 +11,14 @@ public class HttpHandlers {
     public class func directory(dir: String) -> ( HttpRequest -> HttpResponse ) {
         return { request in
             if let localPath = request.capturedUrlGroups.first {
-                if localPath == "" { // root path
+                if localPath == "" || localPath.hasSuffix("/") { // root path or folder path
                     for index in ["index.html", "index.htm"] {
-                        let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(index)
+                        let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(localPath).stringByAppendingPathComponent(index)
                         if let fileBody = NSData(contentsOfFile: filesPath) {
                             return HttpResponse.RAW(200, "OK", nil, fileBody)
                         }
                     }
-                } else {
+                } else { // file path
                     let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(localPath)
                     if let fileBody = NSData(contentsOfFile: filesPath) {
                         return HttpResponse.RAW(200, "OK", nil, fileBody)

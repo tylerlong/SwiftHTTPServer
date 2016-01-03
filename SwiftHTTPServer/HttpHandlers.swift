@@ -11,7 +11,7 @@ public class HttpHandlers {
     public class func directory(dir: String) -> ( HttpRequest -> HttpResponse ) {
         return { request in
             if let localPath = request.capturedUrlGroups.first {
-                if localPath == "" || localPath.hasSuffix("/") { // root path or folder path
+                if localPath == "" || localPath.rangeOfString(".") == nil { // root path or folder path
                     for index in ["index.html", "index.htm"] {
                         let filesPath = dir.stringByExpandingTildeInPath.stringByAppendingPathComponent(localPath).stringByAppendingPathComponent(index)
                         if let fileBody = NSData(contentsOfFile: filesPath) {
